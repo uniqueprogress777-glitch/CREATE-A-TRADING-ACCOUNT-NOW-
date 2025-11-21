@@ -1,0 +1,581 @@
+DOCTYPE html>
+‎<html lang="en">
+‎<head>
+‎  <meta charset="UTF-8">
+‎  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+‎  <title>Start Trading Forex Today</title>
+‎  <style>
+‎    * {
+‎      margin: 0;
+‎      padding: 0;
+‎      box-sizing: border-box;
+‎    }
+‎    
+‎    body {
+‎      font-family: 'Segoe UI', system-ui, sans-serif;
+‎      background: linear-gradient(135deg, #0a1628 0%, #1a365d 50%, #0d2137 100%);
+‎      min-height: 100vh;
+‎      color: #fff;
+‎      overflow-x: hidden;
+‎    }
+‎    
+‎    .hero {
+‎      min-height: 100vh;
+‎      display: flex;
+‎      flex-direction: column;
+‎      align-items: center;
+‎      justify-content: center;
+‎      padding: 40px 20px;
+‎      position: relative;
+‎    }
+‎    
+‎    .hero::before {
+‎      content: '';
+‎      position: absolute;
+‎      top: 0;
+‎      left: 0;
+‎      right: 0;
+‎      bottom: 0;
+‎      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300d4aa' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+‎      opacity: 0.5;
+‎    }
+‎    
+‎    .badge {
+‎      background: linear-gradient(90deg, #00d4aa, #00b894);
+‎      color: #0a1628;
+‎      padding: 8px 20px;
+‎      border-radius: 50px;
+‎      font-size: 0.85rem;
+‎      font-weight: 600;
+‎      margin-bottom: 30px;
+‎      animation: pulse 2s infinite;
+‎      position: relative;
+‎      z-index: 1;
+‎    }
+‎    
+‎    @keyframes pulse {
+‎      0%, 100% { transform: scale(1); }
+‎      50% { transform: scale(1.05); }
+‎    }
+‎    
+‎    h1 {
+‎      font-size: clamp(2.2rem, 5vw, 3.5rem);
+‎      text-align: center;
+‎      margin-bottom: 20px;
+‎      line-height: 1.2;
+‎      position: relative;
+‎      z-index: 1;
+‎    }
+‎    
+‎    h1 span {
+‎      background: linear-gradient(90deg, #00d4aa, #4fd1c5);
+‎      -webkit-background-clip: text;
+‎      -webkit-text-fill-color: transparent;
+‎      background-clip: text;
+‎    }
+‎    
+‎    .subtitle {
+‎      font-size: 1.2rem;
+‎      color: #a0aec0;
+‎      text-align: center;
+‎      max-width: 600px;
+‎      margin-bottom: 40px;
+‎      line-height: 1.6;
+‎      position: relative;
+‎      z-index: 1;
+‎    }
+‎    
+‎    .cta-box {
+‎      background: rgba(255,255,255,0.05);
+‎      backdrop-filter: blur(10px);
+‎      border: 1px solid rgba(255,255,255,0.1);
+‎      border-radius: 20px;
+‎      padding: 40px;
+‎      max-width: 450px;
+‎      width: 100%;
+‎      position: relative;
+‎      z-index: 1;
+‎    }
+‎    
+‎    .feature-list {
+‎      list-style: none;
+‎      margin-bottom: 30px;
+‎    }
+‎    
+‎    .feature-list li {
+‎      display: flex;
+‎      align-items: center;
+‎      gap: 12px;
+‎      padding: 12px 0;
+‎      border-bottom: 1px solid rgba(255,255,255,0.1);
+‎      font-size: 1rem;
+‎    }
+‎    
+‎    .feature-list li:last-child {
+‎      border-bottom: none;
+‎    }
+‎    
+‎    .check {
+‎      width: 24px;
+‎      height: 24px;
+‎      background: linear-gradient(135deg, #00d4aa, #00b894);
+‎      border-radius: 50%;
+‎      display: flex;
+‎      align-items: center;
+‎      justify-content: center;
+‎      flex-shrink: 0;
+‎    }
+‎    
+‎    .check::after {
+‎      content: '✓';
+‎      color: #0a1628;
+‎      font-weight: bold;
+‎      font-size: 14px;
+‎    }
+‎    
+‎    .cta-button {
+‎      display: block;
+‎      width: 100%;
+‎      padding: 18px 30px;
+‎      font-size: 1.1rem;
+‎      font-weight: 700;
+‎      border: none;
+‎      border-radius: 12px;
+‎      background: linear-gradient(90deg, #00d4aa, #00b894);
+‎      color: #0a1628;
+‎      cursor: pointer;
+‎      transition: all 0.3s ease;
+‎      text-transform: uppercase;
+‎      letter-spacing: 1px;
+‎      text-decoration: none;
+‎      text-align: center;
+‎    }
+‎    
+‎    .cta-button:hover {
+‎      transform: translateY(-3px);
+‎      box-shadow: 0 15px 40px rgba(0, 212, 170, 0.4);
+‎    }
+‎    
+‎    .telegram-btn {
+‎      display: flex;
+‎      align-items: center;
+‎      justify-content: center;
+‎      gap: 10px;
+‎      width: 100%;
+‎      padding: 14px 30px;
+‎      font-size: 1rem;
+‎      font-weight: 600;
+‎      border: 2px solid #0088cc;
+‎      border-radius: 12px;
+‎      background: rgba(0, 136, 204, 0.1);
+‎      color: #0088cc;
+‎      cursor: pointer;
+‎      transition: all 0.3s ease;
+‎      text-decoration: none;
+‎      margin-top: 15px;
+‎    }
+‎    
+‎    .telegram-btn:hover {
+‎      background: #0088cc;
+‎      color: #fff;
+‎      transform: translateY(-2px);
+‎    }
+‎    
+‎    .trust-text {
+‎      text-align: center;
+‎      margin-top: 15px;
+‎      font-size: 0.85rem;
+‎      color: #718096;
+‎    }
+‎    
+‎    .stats {
+‎      display: flex;
+‎      justify-content: center;
+‎      gap: 50px;
+‎      margin-top: 60px;
+‎      flex-wrap: wrap;
+‎      position: relative;
+‎      z-index: 1;
+‎    }
+‎    
+‎    .stat {
+‎      text-align: center;
+‎    }
+‎    
+‎    .stat-number {
+‎      font-size: 2.5rem;
+‎      font-weight: 700;
+‎      background: linear-gradient(90deg, #00d4aa, #4fd1c5);
+‎      -webkit-background-clip: text;
+‎      -webkit-text-fill-color: transparent;
+‎      background-clip: text;
+‎    }
+‎    
+‎    .stat-label {
+‎      color: #a0aec0;
+‎      font-size: 0.9rem;
+‎      margin-top: 5px;
+‎    }
+‎    
+‎    .testimonials {
+‎      padding: 80px 20px;
+‎      background: rgba(0,0,0,0.3);
+‎    }
+‎    
+‎    .testimonials h2 {
+‎      text-align: center;
+‎      font-size: 2rem;
+‎      margin-bottom: 50px;
+‎    }
+‎    
+‎    .testimonials-grid {
+‎      display: grid;
+‎      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+‎      gap: 30px;
+‎      max-width: 1000px;
+‎      margin: 0 auto;
+‎    }
+‎    
+‎    .testimonial-card {
+‎      background: rgba(255,255,255,0.05);
+‎      border: 1px solid rgba(255,255,255,0.1);
+‎      border-radius: 16px;
+‎      padding: 30px;
+‎      position: relative;
+‎    }
+‎    
+‎    .testimonial-card::before {
+‎      content: '"';
+‎      position: absolute;
+‎      top: 15px;
+‎      left: 20px;
+‎      font-size: 4rem;
+‎      color: rgba(0, 212, 170, 0.2);
+‎      font-family: Georgia, serif;
+‎      line-height: 1;
+‎    }
+‎    
+‎    .testimonial-text {
+‎      font-size: 1rem;
+‎      line-height: 1.7;
+‎      color: #cbd5e0;
+‎      margin-bottom: 20px;
+‎      position: relative;
+‎      z-index: 1;
+‎    }
+‎    
+‎    .testimonial-author {
+‎      display: flex;
+‎      align-items: center;
+‎      gap: 15px;
+‎    }
+‎    
+‎    .author-avatar {
+‎      width: 50px;
+‎      height: 50px;
+‎      border-radius: 50%;
+‎      background: linear-gradient(135deg, #00d4aa, #00b894);
+‎      display: flex;
+‎      align-items: center;
+‎      justify-content: center;
+‎      font-weight: 700;
+‎      font-size: 1.2rem;
+‎      color: #0a1628;
+‎    }
+‎    
+‎    .author-info h4 {
+‎      font-size: 1rem;
+‎      margin-bottom: 3px;
+‎    }
+‎    
+‎    .author-info p {
+‎      font-size: 0.85rem;
+‎      color: #718096;
+‎    }
+‎    
+‎    .stars {
+‎      color: #fbbf24;
+‎      font-size: 0.9rem;
+‎      margin-bottom: 15px;
+‎    }
+‎    
+‎    .benefits {
+‎      padding: 80px 20px;
+‎      background: rgba(0,0,0,0.2);
+‎    }
+‎    
+‎    .benefits h2 {
+‎      text-align: center;
+‎      font-size: 2rem;
+‎      margin-bottom: 50px;
+‎    }
+‎    
+‎    .benefits-grid {
+‎      display: grid;
+‎      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+‎      gap: 30px;
+‎      max-width: 1000px;
+‎      margin: 0 auto;
+‎    }
+‎    
+‎    .benefit-card {
+‎      background: rgba(255,255,255,0.03);
+‎      border: 1px solid rgba(255,255,255,0.08);
+‎      border-radius: 16px;
+‎      padding: 30px;
+‎      transition: all 0.3s ease;
+‎    }
+‎    
+‎    .benefit-card:hover {
+‎      transform: translateY(-5px);
+‎      border-color: rgba(0, 212, 170, 0.3);
+‎    }
+‎    
+‎    .benefit-icon {
+‎      width: 50px;
+‎      height: 50px;
+‎      background: linear-gradient(135deg, rgba(0,212,170,0.2), rgba(0,184,148,0.2));
+‎      border-radius: 12px;
+‎      display: flex;
+‎      align-items: center;
+‎      justify-content: center;
+‎      font-size: 1.5rem;
+‎      margin-bottom: 20px;
+‎    }
+‎    
+‎    .benefit-card h3 {
+‎      font-size: 1.2rem;
+‎      margin-bottom: 10px;
+‎    }
+‎    
+‎    .benefit-card p {
+‎      color: #a0aec0;
+‎      line-height: 1.6;
+‎      font-size: 0.95rem;
+‎    }
+‎    
+‎    .final-cta {
+‎      padding: 80px 20px;
+‎      text-align: center;
+‎    }
+‎    
+‎    .final-cta h2 {
+‎      font-size: 2rem;
+‎      margin-bottom: 20px;
+‎    }
+‎    
+‎    .final-cta p {
+‎      color: #a0aec0;
+‎      max-width: 500px;
+‎      margin: 0 auto 30px;
+‎      line-height: 1.6;
+‎    }
+‎    
+‎    .final-cta .cta-button {
+‎      width: auto;
+‎      display: inline-block;
+‎      padding: 18px 50px;
+‎    }
+‎    
+‎    .final-cta .telegram-btn {
+‎      width: auto;
+‎      display: inline-flex;
+‎      padding: 14px 40px;
+‎      margin-top: 20px;
+‎    }
+‎    
+‎    .disclaimer {
+‎      text-align: center;
+‎      padding: 30px 20px;
+‎      font-size: 0.75rem;
+‎      color: #4a5568;
+‎      max-width: 800px;
+‎      margin: 0 auto;
+‎      line-height: 1.6;
+‎    }
+‎    
+‎    .floating-telegram {
+‎      position: fixed;
+‎      bottom: 30px;
+‎      right: 30px;
+‎      width: 60px;
+‎      height: 60px;
+‎      background: #0088cc;
+‎      border-radius: 50%;
+‎      display: flex;
+‎      align-items: center;
+‎      justify-content: center;
+‎      box-shadow: 0 4px 20px rgba(0, 136, 204, 0.5);
+‎      z-index: 1000;
+‎      transition: all 0.3s ease;
+‎      text-decoration: none;
+‎    }
+‎    
+‎    .floating-telegram:hover {
+‎      transform: scale(1.1);
+‎      box-shadow: 0 6px 30px rgba(0, 136, 204, 0.7);
+‎    }
+‎    
+‎    .floating-telegram svg {
+‎      width: 30px;
+‎      height: 30px;
+‎      fill: white;
+‎    }
+‎  </style>
+‎</head>
+‎<body>
+‎  <!-- Floating Telegram Button -->
+‎  <a href="https://t.me/profitabletraders777" target="_blank" class="floating-telegram" title="Join our Telegram">
+‎    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+‎      <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+‎    </svg>
+‎  </a>
+‎
+‎  <section class="hero">
+‎    <div class="badge">🔥 Limited Time: $0 Account Minimum</div>
+‎    
+‎    <h1>Start Trading Forex<br><span>Like a Pro</span></h1>
+‎    
+‎    <p class="subtitle">Join thousands of beginners who turned their first trade into a new income stream. No experience needed—we'll show you exactly how.</p>
+‎    
+‎    <div class="cta-box">
+‎      <ul class="feature-list">
+‎        <li><span class="check"></span>Free demo account with $10,000 virtual funds</li>
+‎        <li><span class="check"></span>Step-by-step beginner tutorials</li>
+‎        <li><span class="check"></span>24/7 expert support in your language</li>
+‎        <li><span class="check"></span>Trade 100+ currency pairs</li>
+‎        <li><span class="check"></span>Fast withdrawals—get paid in 24 hours</li>
+‎      </ul>
+‎      
+‎      <a href="https://rebrand.ly/create-accoun" target="_blank" class="cta-button">Open Free Account →</a>
+‎      
+‎      <a href="https://t.me/profitabletraders777" target="_blank" class="telegram-btn">
+‎        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+‎          <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+‎        </svg>
+‎        Join Free Telegram Signals
+‎      </a>
+‎      
+‎      <p class="trust-text">🔒 256-bit encryption • Regulated broker • 2M+ traders</p>
+‎    </div>
+‎    
+‎    <div class="stats">
+‎      <div class="stat">
+‎        <div class="stat-number">2M+</div>
+‎        <div class="stat-label">Active Traders</div>
+‎      </div>
+‎      <div class="stat">
+‎        <div class="stat-number">$4B+</div>
+‎        <div class="stat-label">Daily Volume</div>
+‎      </div>
+‎      <div class="stat">
+‎        <div class="stat-number">0.0</div>
+‎        <div class="stat-label">Pip Spreads</div>
+‎      </div>
+‎    </div>
+‎  </section>
+‎  
+‎  <!-- TESTIMONIALS SECTION -->
+‎  <section class="testimonials">
+‎    <h2>What Our Traders Say</h2>
+‎    
+‎    <div class="testimonials-grid">
+‎      <div class="testimonial-card">
+‎        <div class="stars">★★★★★</div>
+‎        <p class="testimonial-text">I was completely new to forex trading. Within 2 weeks of joining, I made my first profitable trade. The tutorials and Telegram signals made everything so easy to understand!</p>
+‎        <div class="testimonial-author">
+‎          <div class="author-avatar">JM</div>
+‎          <div class="author-info">
+‎            <h4>James M.</h4>
+‎            <p>Started 3 months ago</p>
+‎          </div>
+‎        </div>
+‎      </div>
+‎      
+‎      <div class="testimonial-card">
+‎        <div class="stars">★★★★★</div>
+‎        <p class="testimonial-text">The demo account helped me practice without risking real money. Now I trade confidently every day. Best decision I ever made was joining this platform!</p>
+‎        <div class="testimonial-author">
+‎          <div class="author-avatar">SA</div>
+‎          <div class="author-info">
+‎            <h4>Sarah A.</h4>
+‎            <p>Full-time trader</p>
+‎          </div>
+‎        </div>
+‎      </div>
+‎      
+‎      <div class="testimonial-card">
+‎        <div class="stars">★★★★★</div>
+‎        <p class="testimonial-text">Withdrawals are super fast—I got my profits in less than 24 hours. The support team is always available when I need help. Highly recommended for beginners!</p>
+‎        <div class="testimonial-author">
+‎          <div class="author-avatar">DK</div>
+‎          <div class="author-info">
+‎            <h4>David K.</h4>
+‎            <p>Trading for 6 months</p>
+‎          </div>
+‎        </div>
+‎      </div>
+‎    </div>
+‎  </section>
+‎  
+‎  <section class="benefits">
+‎    <h2>Why Beginners Choose Us</h2>
+‎    
+‎    <div class="benefits-grid">
+‎      <div class="benefit-card">
+‎        <div class="benefit-icon">📚</div>
+‎        <h3>Learn While You Earn</h3>
+‎        <p>Free video courses, webinars, and 1-on-1 coaching sessions designed specifically for complete beginners.</p>
+‎      </div>
+‎      
+‎      <div class="benefit-card">
+‎        <div class="benefit-icon">⚡</div>
+‎        <h3>Start in 5 Minutes</h3>
+‎        <p>Quick sign-up, instant account verification, and you're ready to place your first trade before lunch.</p>
+‎      </div>
+‎      
+‎      <div class="benefit-card">
+‎        <div class="benefit-icon">🛡️</div>
+‎        <h3>Your Money is Safe</h3>
+‎        <p>Fully regulated, segregated client funds, and negative balance protection means you can never lose more than you deposit.</p>
+‎      </div>
+‎      
+‎      <div class="benefit-card">
+‎        <div class="benefit-icon">📱</div>
+‎        <h3>Trade Anywhere</h3>
+‎        <p>Powerful mobile app lets you monitor markets and execute trades from your phone, tablet, or desktop.</p>
+‎      </div>
+‎      
+‎      <div class="benefit-card">
+‎        <div class="benefit-icon">💰</div>
+‎        <h3>Low Cost Trading</h3>
+‎        <p>Competitive spreads starting from 0.0 pips. No hidden fees. Keep more of your profits.</p>
+‎      </div>
+‎      
+‎      <div class="benefit-card">
+‎        <div class="benefit-icon">🎯</div>
+‎        <h3>Copy Top Traders</h3>
+‎        <p>Not ready to trade solo? Automatically copy the strategies of successful traders with one click.</p>
+‎      </div>
+‎    </div>
+‎  </section>
+‎  
+‎  <section class="final-cta">
+‎    <h2>Ready to Start Your Trading Journey?</h2>
+‎    <p>Join over 2 million traders worldwide. Open your free account today and get instant access to global markets.</p>
+‎    <a href="https://rebrand.ly/create-accoun" target="_blank" class="cta-button">Create Free Account →</a>
+‎    <br>
+‎    <a href="https://t.me/profitabletraders777" target="_blank" class="telegram-btn">
+‎      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+‎        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+‎      </svg>
+‎      Join Free Telegram Signals
+‎    </a>
+‎  </section>
+‎  
+‎  <div class="disclaimer">
+‎    <strong>Risk Warning:</strong> Trading forex and CFDs carries a high level of risk and may not be suitable for all investors. You could lose more than your initial investment. Please ensure you fully understand the risks involved and seek independent advice if necessary. Past performance is not indicative of future results.
+‎  </div>
+‎</body>
+‎</html>
+‎
